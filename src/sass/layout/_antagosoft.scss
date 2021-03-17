@@ -1,0 +1,347 @@
+.wrapper{
+  > .container{
+    flex: 1 0 auto;
+  }
+}
+#header {
+  position: relative;
+  padding: 14px 0 0px;
+  box-sizing: border-box;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  &__img{
+    position: relative;
+    margin-right: 7px;
+    flex: 0 0 124px;
+    height: 124px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 3;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+  &__position{
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #808080;
+    margin-bottom: 5px;
+  }
+  &__descr{
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    background-color: #fffbc8;
+    border: 1px solid #cecabf;
+    border-radius: 4px;
+    padding: 4px 11px 4px 45px;
+    margin: 0 0 10px -45px;
+    @include media('<400px') {
+      padding: 10px 5px 10px 45px;
+    }
+    p{
+      margin: 0;
+    }
+  }
+}
+
+/* services */
+.services {
+  width: 71%;
+  margin: -2px 0 23px auto;
+  &__descr{
+    display: block;
+    width: 30%;
+    font-weight: 400;
+    margin-left: auto;
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 7px;
+  }
+  &__content{
+    border-top: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
+    padding: 14px 0;
+    margin-bottom: 12px;
+  }
+  &__element{
+    font-size: 13px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2px;
+    border-left: 1px solid rgba(51, 51, 51, 0.2);
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  &__title{
+    //font-size: 13px;
+    //line-height: 26px;
+    font-weight: 400;
+    width: 70%;
+    position: relative;
+    z-index: 1;
+    padding-left: 6px;
+    &_green{
+      span{
+        background: #B1E19B;
+      }
+    }
+    &_blue{
+      span{
+        background: #ACE2F8;
+      }
+    }
+
+  }
+  &__progress{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0px 3px 3px 0px;
+    &_w98{
+      width: 98%;
+    }
+    &_w23{
+      width: 23%;
+    }
+    &_w14{
+      width: 14%;
+    }
+  }
+  &__quantity{
+    font-weight: 700;
+    width: 30%;
+    text-align: center;
+    //font-size: 13px;
+    //line-height: 26px;
+  }
+  &__total-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__total-title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__total-quantity{
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/* reviews */
+.reviews {
+  margin-bottom: 20px;
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11px;
+    @include media('<400px') {
+      flex-direction: column;
+    }
+  }
+  &__title{
+    font-size: 16px;
+    line-height: 20px;
+    @include media('<400px') {
+      margin-bottom: 6px;
+    }
+  }
+  &__link{
+    margin-left: 9px;
+    font-size: 14px;
+    line-height: 18px;
+    color:#005DA1;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  &__wall-module{
+    display: flex;
+    align-items: center;
+    a{
+      display: flex;
+      align-items: center;
+      margin-left: 19px;
+      svg{
+        margin-right: 4px;
+        path{
+          fill: #73B4D5;
+          transition: .3s;
+        }
+
+      }
+      &:hover,
+      &:active{
+        svg{
+          path{
+            fill: #B1E19B;
+          }
+        }
+      }
+    }
+  }
+  &__comment{
+    svg{
+      margin-bottom: -3px;
+    }
+  }
+  &__like-count,
+  &__comment-count{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+  &__comment-block{
+    display: block;
+    margin-bottom: 22px;
+    li{
+      margin-bottom: 15px;
+      .name {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .date {
+        font-size: 11px;
+        line-height: 17px;
+        color: #808080;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 10px;
+      }
+      .comment-text {
+        position: relative;
+        margin-top: 10px;
+        padding: 14px 15px 14px 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #f2fbff;
+        border: 1px solid #cfcfcf;
+        font-size: 14px;
+        line-height: 19px;
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          left: 23px;
+          top: -12px;
+          border: 6px solid transparent;
+          border-bottom: 6px solid #cfcfcf;
+          border-left: 6px solid #cfcfcf;
+        }
+        &:after{
+          border-bottom: 5px solid #f2fbff;
+          border-left: 5px solid #f2fbff;
+          top: -10px;
+          left: 24px;
+        }
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+/* field-user */
+.field-user {
+  position: relative;
+  bottom: 0;
+  background-color: #f2f2f2;
+  padding: 30px 0;
+  text-align: center;
+
+}
+.form-control-messagebox {
+  display: block;
+  width: 100%;
+  height: 65px;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #717070;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #979ea1;
+  border-radius: 3px;
+  resize: none;
+  margin-bottom: 20px;
+}
+.field-user .button {
+  text-align: center;
+  padding: 11px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  color: #333;
+  border: 0;
+  border-radius: 20px;
+  min-width: 280px;
+  background-color: #fdd639;
+  cursor: pointer;
+  letter-spacing: -1.0px;
+}
+.field-user .button:hover {
+  background-color: rgba(253, 210, 67, 0.7);
+  box-shadow: 2px 2px 2px #c3c3c3;
+}
+
+@media screen and (max-width: 400px){
+  .descr {
+    margin: 0 0 0 75px;
+    padding: 6px 6px 6px 54px;
+  }
+  .services {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 485px){
+  .descr {
+    margin: 0 0 0 75px;
+    padding: 6px 6px 6px 54px;
+  }
+}
+@media screen and (max-width: 390px){
+  .reviews .row strong {
+    display: block;
+    text-align: center;
+    float: none;
+  }
+  .wall-module {
+    float: none;
+    text-align: center;
+  }
+  .field-user .button {
+    width: 100%;
+    min-width: inherit;
+  }
+}
+@media screen and (max-width: 320px){
+  .container {
+    padding: 0 10px;
+  }
+}

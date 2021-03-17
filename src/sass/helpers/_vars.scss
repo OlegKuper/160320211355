@@ -3,7 +3,7 @@ $fonts: '../fonts/';
 $images: '../images/';
 
 // fonts
-$Roboto: Roboto sans-serif;
+$Arial: Arial, sans-serif;
 
 $breakpoints: (
 	phone-xs: 375px,
@@ -14,13 +14,13 @@ $breakpoints: (
 );
 
 // font settings
-$grid-gutter-width: 15px;
-$container-large-desktop: 980px;
+$grid-gutter-width: 20px;
+$container-large-desktop: 760px;
 
-$font-family-base: $Roboto;
+$font-family-base: $Arial;
 $font-size-base: 16px;
 $line-height-base: 1.25;
-$font-size-h1: 30px;
+$font-size-h1: 16px;
 $font-size-h2: 24px;
 $font-size-h3: 25px;
 $font-size-h4: 24px;
@@ -36,12 +36,12 @@ $black: #000;
 $gray: #333;
 
 
-$base-color: $black;
+$base-color: $gray;
 $body-bg: $white;
 
-$link-color: $black;
+$link-color: $gray;
 
-$btn-color: $black;
+$btn-color: $gray;
 $btn-border-radius-base: 30px;
 $btn-font-size: 13px;
 $btn-line-height: 18px;

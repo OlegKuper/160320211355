@@ -124,9 +124,7 @@ table{border-collapse: collapse;}
 	padding: 0 $grid-gutter-width;
 	margin: 0 auto;
 	width: 100%;
-	@include media("<phone") {
-		padding: 0 15px;
-	}
+
 	&_fluid{
 		max-width: 100%;
 		padding: 0;
@@ -178,8 +176,7 @@ h1, .h1{
 	font-family: $font-family-base;
 	font-weight: 700;
 	color: $black;
-	text-align: center;
-	margin: 0;
+	margin: 0 0 2px;
 	@include media("<desktop"){}
 	@include media("<tablet"){}
 	@include media("<phone"){}
