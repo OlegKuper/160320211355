@@ -1,0 +1,230 @@
+/* reset css */
+*{-webkit-text-size-adjust:none}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background:transparent;
+}
+html{
+	height:100%;
+	background: $white;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body{
+	min-height:100%;
+	font-family: $font-family-base;
+	position:relative;
+	background: $body-bg;
+	color: $base-color;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	-webkit-font-smoothing: antialiased;
+	@include media("<phone"){
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+input,
+textarea,
+select{
+	color: $base-color;
+	vertical-align: middle;
+	font: 100% $font-family-base;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: .3s all;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+	border: none;
+	padding:0;
+}
+a,
+button,
+input,
+textarea,
+select {
+	&:focus {
+		outline: none;
+	}
+}
+input[type="search"] {
+	-webkit-appearance: none;
+}
+.form__control{
+	-webkit-appearance: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+ul{list-style: none;}
+blockquote, q{quotes: none;}
+a{
+	color: $link-color;
+	text-decoration: none;
+}
+a:focus{
+	text-decoration: none;
+}
+a:hover{
+	color: $link-color;
+	text-decoration: none;
+}
+*::-webkit-input-placeholder{
+	color:$gray;
+	opacity: 1;
+}
+*:-moz-placeholder{
+	color:$gray;
+	opacity: 1;
+}
+*::-moz-placeholder{
+	color:$gray;
+	opacity: 1;
+}
+*:-ms-input-placeholder{
+	color:$gray;
+	opacity: 1;
+}
+table{border-collapse: collapse;}
+*,
+*:before,
+*:after{
+	@include box-sizing();
+}
+
+/* styles */
+.wrapper {
+	position:relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	transition: margin .5s;
+}
+.page{
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	overflow: hidden;
+}
+.container{
+	max-width: $container-large-desktop;
+	padding: 0 $grid-gutter-width;
+	margin: 0 auto;
+	width: 100%;
+	@include media("<phone") {
+		padding: 0 15px;
+	}
+	&_fluid{
+		max-width: 100%;
+		padding: 0;
+	}
+	@include clearfix;
+}
+
+.row{
+	@include clearfix();
+}
+.mb{
+	display: none;
+}
+.pc{
+	display: block;
+}
+/* Tablet */
+@media only screen and (max-width: 768px){
+	.mb{
+		display: block !important;
+	}
+	.pc{
+		display: none !important;
+	}
+}
+/* Smartphone */
+@media only screen and (min-width: 768px){
+	.mb{
+		display: none !important;;
+	}
+	.pc{
+		display: block !important;
+	}
+}
+.hidden{
+	display: none !important;
+}
+.img-to-bg{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	> img{display: none;}
+}
+
+/*typography*/
+h1, .h1{
+	font-size: $font-size-h1;
+	line-height: 1.25;
+	font-family: $font-family-base;
+	font-weight: 700;
+	color: $black;
+	text-align: center;
+	margin: 0;
+	@include media("<desktop"){}
+	@include media("<tablet"){}
+	@include media("<phone"){}
+}
+h2, .h2{
+	font-size: $font-size-h2;
+	line-height: 1.25;
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: $black;
+	text-align: center;
+	margin: 0 0 15px;
+	@include media("<desktop"){}
+	@include media("<tablet"){}
+	@include media("<phone"){}
+}
+h3, .h3{
+	font-size: $font-size-h3;
+	line-height: 1.25;
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: $black;
+	text-align: center;
+	margin: 0 0 15px;
+	@include media("<desktop"){}
+	@include media("<tablet"){}
+	@include media("<phone"){}
+}
+h4, .h4{
+	font-size: $font-size-h4;
+	line-height: 1.25;
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: $black;
+	text-align: left;
+	margin: 0 0 25px;
+	@include media("<desktop"){}
+	@include media("<tablet"){}
+	@include media("<phone"){}
+}
+p{margin: $paragraph-spacing;}
+/*end typography*/
+/* styles end */
+
+@include media("<desktop_lg"){}
+@include media("<desktop"){}
+@include media("<tablet"){}
+@include media("<phone"){}

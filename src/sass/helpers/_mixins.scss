@@ -1,0 +1,11 @@
+// mixins
+@mixin box-sizing{
+	box-sizing: border-box;
+}
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

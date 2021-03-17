@@ -1,0 +1,22 @@
+/* main-nav */
+.main-nav{
+	float: right;
+	@include media("<tablet") {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 280px;
+		right: -280px;
+		background: $black;
+		z-index: 100;
+		transition: right .5s;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	@include media("<phone") {
+		width: 260px;
+		right: -260px;
+	}
+}
