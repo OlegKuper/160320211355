@@ -26,7 +26,6 @@ const commentObj = JSON.parse(localStorage.getItem('comments'))
 if(localStorage.getItem('comments') !== null){
     comments = commentObj
 }
-console.log(comments)
 function renderComments() {
     const itemsHTML = comments.map((i)=>{
         return `
