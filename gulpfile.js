@@ -11,11 +11,13 @@ let gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	concat = require('gulp-concat'),
 	babel = require('gulp-babel'),
+	polyfill = require("@babel/polyfill"),
 	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin'),
 	changed = require('gulp-changed'),
 	rigger = require('gulp-rigger'),
-	ghPages = require('gulp-gh-pages');
+	ghPages = require('gulp-gh-pages'),
+	requiredFiles = ['src/js/main.js']
 
 let path = {
 	src: {
@@ -48,6 +50,7 @@ let path = {
 };
 
 gulp.task('default', gulpsync.sync(['clean', ['html', 'styles', 'minify', 'js', 'js2', 'fonts', 'images', 'imageanimate', 'browser', 'watch']]));
+
 
 gulp.task('browser', () => {
 	browser.init({
@@ -105,7 +108,7 @@ gulp.task('js', () => {
 		.pipe(gulp.dest(path.public.js))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(babel({
-			presets: ['babel-preset-env']
+			presets: ['@babel/preset-env']
 		}))
 		.pipe(uglify())
 		.pipe(gulp.dest(path.public.js))
@@ -115,7 +118,7 @@ gulp.task('js2', () => {
 	return gulp.src(path.src.js_min)
 		.pipe(gulp.dest(path.public.js))
 		.pipe(babel({
-			presets: ['babel-preset-env']
+			presets: ['@babel/preset-env']
 		}))
 		.pipe(uglify())
 		.pipe(gulp.dest(path.public.js))

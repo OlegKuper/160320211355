@@ -4,17 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d public"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/register": "^7.13.8",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -28,6 +33,7 @@
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "gulp-clean-css": "^4.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-gm": "0.0.9",
